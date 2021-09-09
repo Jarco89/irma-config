@@ -1,0 +1,18 @@
+production: false
+email: ""  # see https://irma.app/docs/email
+schemes_update: 0
+# port: "8088"
+#url: "http://192.168.178.17:8088"
+url: "http://192.168.178.17:8088"
+
+jwt_privkey_file: "/home/jarco/irma-config/jwt_private.key"
+# disclose_perms: ["irma-demo.MijnOverheid.*"],
+
+no_auth: false
+requestors:
+  cerina:
+    #auth_method: "token"
+    #key: "mysecrettoken"
+    #disclose_perms: "irma-demo.MijnOverheid.*",
+    auth_method: "publickey"
+    key_file: "/home/jarco/irma-config/requestor_jwt_certificate.pem"    
